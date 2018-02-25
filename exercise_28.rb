@@ -38,3 +38,11 @@ true || 1 == 1
 "chunky" == "bacon" && (!(3 == 4 || 3 == 3))
 # false
 3 == 3 && (!("testing" == "testing" || "Ruby" == "fun"))
+
+# ruby likes to return operands to booleans instead of the boolean itself
+def testing_test
+  puts "inside testing_test fn"
+  return "chunky" == "chunky" && (3 == 4 || 3 == 3)
+end
+
+puts testing_test
